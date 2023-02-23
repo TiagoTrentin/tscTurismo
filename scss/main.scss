@@ -1,0 +1,218 @@
+// reset
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// import
+@import "utilidades/variables";
+@import "utilidades/listas";
+@import "utilidades/mapas";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+
+
+/* estilos de body */
+
+body{
+    background-color: $color-principal;
+}
+
+/* estilos de header */
+
+header{
+    color: whitesmoke;
+    nav{
+        ul{
+            div{
+                li{
+                    list-style: none;
+                    display: flex;
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+} 
+
+/* estilo de main */
+
+main{
+    margin: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    div{
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+                p{
+                    font-size: 1.5rem;
+                    color: rgb(255, 255, 255);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+        }
+        }
+    }
+}
+
+/* estilos de las imagenes de main */
+
+.mardelplata, .mendoza, .larioja, .cataratasiguazu{
+    display: none;
+}
+
+/* estilos de footer */
+
+footer{
+    margin: 1rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* mq de tablet */
+
+@media screen and (min-width:600px) {
+    header nav ul div li{
+        border-bottom: 1px solid white;
+        transform: scale(0.9);
+        text-shadow: 1px 1px blue;
+        font-weight: lighter;
+    }
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3);
+    }
+
+    .bariloche{
+    grid-column: span 2;
+    transition: 3s;
+    }
+
+    .buenosaires{
+        grid-row: span 2;
+        transition: 3s;
+    }
+
+    .glaciarperitomoreno{
+        transition: 3s;
+    }
+
+    .cerrosietecolores{
+        transition: 3s;
+    }
+
+    .bariloche:hover{
+        box-shadow: 30px 20px 30px rgb(192, 192, 192);
+        transform: scale(0.8);
+        opacity: 60%;
+        transition: 2s;
+    }
+
+    .buenosaires:hover{
+        box-shadow: 30px 20px 30px rgb(192, 192, 192);
+        transform: scale(0.8);
+        opacity: 60%;
+        transition: 2s;
+    }
+
+    .glaciarperitomoreno:hover{
+        box-shadow: 30px 20px 30px rgb(192, 192, 192);
+        transform: scale(0.8);
+        opacity: 60%;
+        transition: 2s;
+    }
+
+    .cerrosietecolores:hover{
+        box-shadow: 30px 20px 30px rgb(192, 192, 192);
+        transform: scale(0.8);
+        opacity: 60%;
+        transition: 2s;
+    }
+    }
+
+/* estilos de desktop */
+
+@media screen and (min-width:1024px) {
+    main .mardelplata, .mendoza, .larioja, .cataratasiguazu{
+        display: block;
+    }
+
+    main{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .bariloche{
+        grid-column: span 3;
+        transition: 3s;
+    }
+
+    .buenosaires{
+        grid-row: span 2;
+        transition: 3s;
+    }
+
+    .mendoza{
+        grid-row: span 1;
+        transition: 3s;
+    }
+
+    .mardelplata{
+        grid-row: span 1;
+        transition: 3s;
+    }
+
+    .glaciarperitomoreno{
+        grid-row: span 2;
+        transition: 3s;
+    }
+
+    .larioja{
+        grid-column: span 1;
+        transition: 3s;
+    }
+
+    .cerrosietecolores{
+        grid-column: span 2;
+        transition: 3s;
+    }
+
+    .cataratasiguazu{
+        grid-column: span 3;
+        transition: 3s;
+    }
+    
+    .mendoza:hover{
+        box-shadow: 30px 20px 30px rgb(192, 192, 192);
+        transform: scale(0.8);
+        opacity: 60%;
+        transition: 2s;
+    }
+
+    .mardelplata:hover{
+        box-shadow: 30px 20px 30px rgb(192, 192, 192);
+        transform: scale(0.8);
+        opacity: 60%;
+        transition: 2s;
+    }
+
+    .larioja:hover{
+        box-shadow: 30px 20px 30px rgb(192, 192, 192);
+        transform: scale(0.8);
+        opacity: 60%;
+        transition: 2s;
+    }
+
+    .cataratasiguazu:hover{
+        box-shadow: 30px 20px 30px rgb(192, 192, 192);
+        transform: scale(0.8);
+        opacity: 60%;
+        transition: 2s;
+    }
+}
